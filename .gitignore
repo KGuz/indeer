@@ -1,0 +1,5 @@
+.*
+!/.gitignore
+[Cc][Mm]ake*
+analyze_dir
+run_tests

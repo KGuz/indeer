@@ -47,4 +47,4 @@ sample_directory
 |-file-2.txt : 9 lines, 475 tokens, 2741 symbols
 ```
 ## Tests
-To compile the tests, locate the unit tests folder and run `cmake CMakeLists.txt && make` (gtest library required). To run the test, just type `. /run_tests`. 
+To compile the tests, locate the unit tests folder and run `cmake CMakeLists.txt && make` (gtest library required). To run the test, just type `./run_tests`. 

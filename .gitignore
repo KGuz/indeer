@@ -2,5 +2,6 @@
 !/.gitignore
 [Cc][Mm]ake*
 !CMakeLists.txt
+Makefile
 bin/*
 run_tests

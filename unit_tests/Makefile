@@ -123,6 +123,60 @@ run_tests/fast:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.o: home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.o
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.o
+
+# target to build an object file
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.o
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.o
+
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.i: home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.i
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.i
+
+# target to preprocess a source file
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.i
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.i
+
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.s: home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.s
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.s
+
+# target to generate assembly for a file
+home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.s
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.cpp.s
+
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.o: home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.o
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.o
+
+# target to build an object file
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.o
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.o
+
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.i: home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.i
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.i
+
+# target to preprocess a source file
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.i
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.i
+
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.s: home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.s
+
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.s
+
+# target to generate assembly for a file
+home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.s
+.PHONY : home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.cpp.s
+
 tests.o: tests.cpp.o
 
 .PHONY : tests.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... run_tests"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.o"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.i"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/DirectoryInspector.s"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.o"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.i"
+	@echo "... home/kg/Projects/BCFSoftware-Assignment/src/ThreadPool.s"
 	@echo "... tests.o"
 	@echo "... tests.i"
 	@echo "... tests.s"

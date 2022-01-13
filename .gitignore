@@ -1,5 +1,6 @@
 .*
 !/.gitignore
 [Cc][Mm]ake*
-analyze_dir
+!CMakeLists.txt
+bin/*
 run_tests

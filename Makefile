@@ -111,17 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named analyze_dir
+# Target rules for targets named inspect_dir
 
 # Build rule for target.
-analyze_dir: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 analyze_dir
-.PHONY : analyze_dir
+inspect_dir: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inspect_dir
+.PHONY : inspect_dir
 
 # fast build rule for target.
-analyze_dir/fast:
-	$(MAKE) -f CMakeFiles/analyze_dir.dir/build.make CMakeFiles/analyze_dir.dir/build
-.PHONY : analyze_dir/fast
+inspect_dir/fast:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/build
+.PHONY : inspect_dir/fast
+
+src/DirectoryInspector.o: src/DirectoryInspector.cpp.o
+
+.PHONY : src/DirectoryInspector.o
+
+# target to build an object file
+src/DirectoryInspector.cpp.o:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/DirectoryInspector.cpp.o
+.PHONY : src/DirectoryInspector.cpp.o
+
+src/DirectoryInspector.i: src/DirectoryInspector.cpp.i
+
+.PHONY : src/DirectoryInspector.i
+
+# target to preprocess a source file
+src/DirectoryInspector.cpp.i:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/DirectoryInspector.cpp.i
+.PHONY : src/DirectoryInspector.cpp.i
+
+src/DirectoryInspector.s: src/DirectoryInspector.cpp.s
+
+.PHONY : src/DirectoryInspector.s
+
+# target to generate assembly for a file
+src/DirectoryInspector.cpp.s:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/DirectoryInspector.cpp.s
+.PHONY : src/DirectoryInspector.cpp.s
+
+src/ThreadPool.o: src/ThreadPool.cpp.o
+
+.PHONY : src/ThreadPool.o
+
+# target to build an object file
+src/ThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.cpp.o
+
+src/ThreadPool.i: src/ThreadPool.cpp.i
+
+.PHONY : src/ThreadPool.i
+
+# target to preprocess a source file
+src/ThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.cpp.i
+
+src/ThreadPool.s: src/ThreadPool.cpp.s
+
+.PHONY : src/ThreadPool.s
+
+# target to generate assembly for a file
+src/ThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +183,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/analyze_dir.dir/build.make CMakeFiles/analyze_dir.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +192,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/analyze_dir.dir/build.make CMakeFiles/analyze_dir.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +201,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/analyze_dir.dir/build.make CMakeFiles/analyze_dir.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/inspect_dir.dir/build.make CMakeFiles/inspect_dir.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -158,7 +212,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... analyze_dir"
+	@echo "... inspect_dir"
+	@echo "... src/DirectoryInspector.o"
+	@echo "... src/DirectoryInspector.i"
+	@echo "... src/DirectoryInspector.s"
+	@echo "... src/ThreadPool.o"
+	@echo "... src/ThreadPool.i"
+	@echo "... src/ThreadPool.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

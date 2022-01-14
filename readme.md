@@ -52,7 +52,8 @@ sample_directory
 To compile the tests, locate the unit tests folder and run `cmake CMakeLists.txt && make` (gtest library required). To run the test, just type `./run_tests`. 
 
 ## Performance
-Program perfromance was tested on WSL Ubuntu 20.04 with Ryzen 9 5900HX. All results were obtained by running the command `time ./inspect_dir /home THREAD-COUNT` once for each number of threads and should therefore be considered as informational only.
+Program perfromance was tested on WSL Ubuntu 20.04 with Ryzen 9 5900HX. All results were obtained by running the command 
+`time ./inspect_dir /home THREAD-COUNT` once for each number of threads and should therefore be considered as informational only.
 
 | Time | 1 Thread  | 2 Threads | 4 Threads | 8 Threads | 16 Threads |
 | :--- |   :---:   |   :---:   |   :---:   |   :---:   |   :---:    |

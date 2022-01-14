@@ -1,11 +1,11 @@
 #include "ThreadPool.h"
+#include <iostream>
 
 // Initialize worker threads
 ThreadPool::ThreadPool(unsigned int pool_size) : running(true) {
-	std::clamp(pool_size, 1u, std::thread::hardware_concurrency());
-
+	pool_size = std::clamp(pool_size, 1u, std::thread::hardware_concurrency());
 	pool.reserve(pool_size);
-	for (auto i = 0; i < pool_size; ++i) {
+	for (unsigned int i = 0; i < pool_size; ++i) {
 		pool.push_back(std::thread(&ThreadPool::worker, this));
 	};
 }

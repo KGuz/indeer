@@ -16,9 +16,21 @@ int main(int argc, char* argv[]) {
 		std::exit(1);
 	}
 
-	// inspect passed directory and print results to stdout
+	// check for thread count argument
+	unsigned int thread_count = std::thread::hardware_concurrency();
+	if (argc > 2) {
+		try {
+			thread_count = std::stoi(argv[2]);
+		}
+		catch(const std::invalid_argument& e) {
+			std::cerr << "Error: The entered argument is not a valid number\n";
+			std::exit(1);
+		}
+	}
+
+	// inspect given directory and print results to stdout
 	DirectoryInspector di;
-	di.inspect_directory(dir_path, 4);
+	di.inspect_directory(dir_path, thread_count);
 	di.print_inspected_directory();
 
 	return 0;

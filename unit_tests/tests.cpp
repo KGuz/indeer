@@ -1,15 +1,14 @@
-#include <gtest/gtest.h>
+#include "DirectoryInspector.h"
 #include <exception>
+#include <filesystem>
 #include <fstream>
+#include <gtest/gtest.h>
 #include <iostream>
 #include <random>
 #include <sstream>
-#include <filesystem>
-#include "DirectoryInspector.h"
 
 namespace fs = std::filesystem;
 
-// https://stackoverflow.com/a/58454949
 std::filesystem::path create_temporary_directory(unsigned long long max_tries = 1000) {
     auto tmp_dir = std::filesystem::temp_directory_path();
     unsigned long long i = 0;
@@ -32,7 +31,6 @@ std::filesystem::path create_temporary_directory(unsigned long long max_tries = 
     return path;
 }
 
-
 TEST(DirectoryInspectorTest, EmptyFile) {
     fs::path temp_dir = create_temporary_directory();
     fs::path filepath(temp_dir / "file.txt");
@@ -40,7 +38,7 @@ TEST(DirectoryInspectorTest, EmptyFile) {
     std::ofstream file(filepath);
     file << "";
     file.close();
-    
+
     DirectoryInspector d;
     auto fi = d.inspect_file(filepath);
 
@@ -58,7 +56,7 @@ TEST(DirectoryInspectorTest, FileWithOnlyNewLines) {
     std::ofstream file(filepath);
     file << "\n\n\n";
     file.close();
-    
+
     DirectoryInspector d;
     auto fi = d.inspect_file(filepath);
 
@@ -77,7 +75,7 @@ TEST(DirectoryInspectorTest, FileWithSingleToken) {
     std::string token = "singletoken";
     file << token;
     file.close();
-    
+
     DirectoryInspector d;
     auto fi = d.inspect_file(filepath);
 
@@ -96,7 +94,7 @@ TEST(DirectoryInspector_AnalyzeFileTest, FileWithMultipleTokens) {
     std::string s = "multiple\t  tokens \n and   lines";
     file << s;
     file.close();
-    
+
     DirectoryInspector d;
     auto fi = d.inspect_file(filepath);
 
@@ -111,7 +109,7 @@ TEST(DirectoryInspector_AnalyzeFileTest, FileWithMultipleTokens) {
 
 TEST(DirectoryInspector_AnalyzeDirectoryTest, EmptyDirectory) {
     fs::path temp_dir = create_temporary_directory();
-    
+
     DirectoryInspector d;
     d.inspect_directory(temp_dir, 4);
     auto map = d.get_results();
@@ -123,7 +121,7 @@ TEST(DirectoryInspector_AnalyzeDirectoryTest, EmptyDirectory) {
 
 TEST(DirectoryInspector_AnalyzeDirectoryTest, FileInNestedDirectory) {
     fs::path temp_dir = create_temporary_directory();
-     fs::create_directories(temp_dir / "a/b/c");
+    fs::create_directories(temp_dir / "a/b/c");
     fs::path filepath(temp_dir / "a/b/c/file.txt");
 
     std::ofstream file(filepath);
@@ -164,8 +162,7 @@ TEST(DirectoryInspector_AnalyzeDirectoryTest, FilesInMultipleDirectories) {
     fs::remove_all(temp_dir);
 }
 
-
- int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
- }
+}
